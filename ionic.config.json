@@ -1,0 +1,7 @@
+{
+  "name": "qc-iosk-devs-2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

@@ -9,7 +9,7 @@ import {
 } from "three";
 import ModelViewer from "./ModelViewer";
 import { Billboard, Html, Text } from "@react-three/drei";
-// import UareHere from "../../../assets/models/others/landscape.glb";
+import UareHere from "../../../assets/models/others/landscape.glb";
 
 const RotatingMesh = () => {
     const meshRef =
@@ -31,13 +31,13 @@ const RotatingMesh = () => {
 
     return (
         <>
-            {/* <mesh ref={meshRef} position={[7, 0, 30]}>
+            <mesh ref={meshRef} position={[7, 0, 30]}>
                 <ModelViewer
                     position={[0, 2, 0]}
                     modelPath={UareHere}
                     mesh={meshRef.current}
                 />
-            </mesh> */}
+            </mesh>
             <Billboard follow position={[7, 11, 30]}>
                 <Text
                     fontSize={1.5}

@@ -1,0 +1,6 @@
+.bg-sc {
+    --background: url('../imgs/sc-bg.png') no-repeat center center fixed;
+    background: var(--background); 
+    background-size: cover;
+}
+  

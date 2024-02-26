@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">qc-iosk-devs-2</string>
+    <string name="title_activity_main">qc-iosk-devs-2</string>
+    <string name="package_name">qc.iosk.devs.v2</string>
+    <string name="custom_url_scheme">qc.iosk.devs.v2</string>
+</resources>

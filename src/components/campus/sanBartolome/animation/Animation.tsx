@@ -7,17 +7,17 @@ import animation from "../../../../assets/animation/yellow/animation.glb";
 import * as THREE from "three";
 import { useHistory } from "react-router";
 import ModelViewer from "../ModelViewer";
-import openGrounds from "../../../../assets/models/sb_buildings/sb_openGrounds.glb";
-import techvoc from "../../../../assets/models/sb_buildings/techvoc.glb";
-import multipurpose from "../../../../assets/models/sb_buildings/multiPurpose.glb";
-import chineseB from "../../../../assets/models/sb_buildings/chineseB.glb";
-import ched from "../../../../assets/models/sb_buildings/metalCasting.glb";
-import simon from "../../../../assets/models/sb_buildings/yellow.glb";
-import admin from "../../../../assets/models/sb_buildings/admin.glb";
-import bautista from "../../../../assets/models/sb_buildings/bautista.glb";
-import belmonte from "../../../../assets/models/sb_buildings/belmonte.glb";
-import academic from "../../../../assets/models/sb_buildings/academic.glb";
-import ballroom from "../../../../assets/models/sb_buildings/ballroom.glb";
+import openGrounds from "../../../../assets/models/others/sb_final2.glb";
+import techvoc from "../../../../assets/models/sb_buildings/og_techvoc2.glb";
+import multipurpose from "../../../../assets/models/sb_buildings/og_multipurpose2.glb";
+import chineseB from "../../../../assets/models/sb_buildings/og_chineseb2.glb";
+import ched from "../../../../assets/models/sb_buildings/og_metalcasting2.glb";
+import simon from "../../../../assets/models/sb_buildings/og_yellow2.glb";
+import admin from "../../../../assets/models/sb_buildings/og_admin2.glb";
+import bautista from "../../../../assets/models/sb_buildings/og_bautista2.glb";
+import belmonte from "../../../../assets/models/sb_buildings/og_belmonte2.glb";
+import academic from "../../../../assets/models/sb_buildings/og_academic2.glb";
+import ballroom from "../../../../assets/models/sb_buildings/og_ballroom2.glb";
 import landscape from "../../../../assets/models/others/landscape.glb";
 
 interface ContainerProps {
@@ -29,7 +29,7 @@ interface ContainerProps {
 }
 
 const AnimatedModelViewer = ({ modelPath, mixer }: any) => {
-  const { scene, animations, cameras } = useGLTF(modelPath) as GLTF;
+  const { scene, animations, cameras } = useGLTF(modelPath) as unknown as GLTF;
 
   useEffect(() => {
     if (animations) {
@@ -64,7 +64,7 @@ const Animation: React.FC<ContainerProps> = ({
   voice,
   shortPath,
 }) => {
-  const { scene, cameras } = useGLTF(modelPath, shortPath) as GLTF;
+  const { scene, cameras } = useGLTF(modelPath, shortPath) as unknown as GLTF;
 
   const [activeCameraIndex, setActiveCameraIndex] = useState(0);
   const mixerRef = useRef<THREE.AnimationMixer | null>(null);
@@ -106,16 +106,16 @@ const Animation: React.FC<ContainerProps> = ({
 
   return (
     <>
-      <h1 className="absolute z-10 mt-10 ml-96">{roomName}</h1>
+      <h1 className=" absolute z-10 ml-96 mt-10">{roomName}</h1>
       <button
         onClick={handleCameraSwitch}
-        className="absolute z-10 mt-10 ml-20 btn btn-secondary"
+        className="btn btn-secondary absolute z-10 ml-20 mt-10"
       >
         Switch Camera
       </button>
       {/* <button
         onClick={handlePathSwitch}
-        className="absolute z-10 mt-32 ml-20 btn btn-secondary"
+        className="btn btn-secondary absolute z-10 ml-20 mt-32"
       >
         {currentPath === modelPath ? "Short Path" : "Model Path"}
       </button> */}

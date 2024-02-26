@@ -1,15 +1,9 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import {
-    BufferGeometry,
-    Material,
-    Mesh,
-    NormalBufferAttributes,
-    Object3DEventMap,
-} from "three";
+import { BufferGeometry, Material, Mesh, NormalBufferAttributes, Object3DEventMap } from "three";
 import ModelViewer from "./ModelViewer";
-import { Billboard, Html, Text } from "@react-three/drei";
-import UareHere from "../../../assets/models/others/location3.glb";
+import { Billboard, Text } from "@react-three/drei";
+import UareHere from "../../../assets/models/others/location.glb";
 
 const RotatingMesh = () => {
     const meshRef =
